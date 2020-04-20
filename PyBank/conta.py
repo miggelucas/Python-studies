@@ -11,7 +11,7 @@ class Conta:
     def deposita(self, valor):
         self.__carteira += valor
 
-    def retira(self, valor):
+    def retira(self, valor):  
         if self.tem_saldo_valido(valor):
             self.__carteira -= valor
         else:

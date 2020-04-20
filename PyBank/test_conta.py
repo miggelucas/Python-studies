@@ -49,6 +49,8 @@ def test_deve_ser_capaz_de_realizar_transferencias():
     conta1.deposita(50)
     conta1.transfere(50, conta2)
 
+    assert conta1.carteira == 0 and conta2.carteira == 50
+
 def test_nao_deve_permitir_transferencias_com_valor_maior_que_carteira():
     with pytest.raises(ValueError):
         conta1 = Conta("lucas", 1)
