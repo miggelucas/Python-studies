@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    var chances = 2;
+
+
+
+    var segredo = Math.round(Math.random() * 10);
+
+
+
+    while(chances > 0) {
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verifica() {
+
+            if(input.value == segredo) {
+                alert("Você ACERTOU!");
+            } else {
+                alert("Você ERROU!!!!!!!!");
+            }
+
+            input.value = "";
+            input.focus();
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+        chances = chances - 1
+    }
+
+    if (chances == 0){
+        document.write("Você perdeuuuu")
+    }
+
+</script>

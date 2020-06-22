@@ -1,0 +1,32 @@
+body {
+	width: 60%;
+	margin: auto;
+
+	background: url(cidade1.jpg) center;
+	font-family: "Mongata";
+	color: #deb4b4;
+	line-height: 1.5;
+
+
+
+}
+
+
+main {
+	background: #000000bd;
+	text-align: center;
+	padding: 15px 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	border-radius: 15px;
+
+}
+
+
+.fatosAleatorios{
+	
+	text-align: center;
+
+	
+}
+

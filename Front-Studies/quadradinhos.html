@@ -1,0 +1,47 @@
+<canvas width="600" height="400"></canvas>
+
+<script type="text/javascript">
+	
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	
+	var cores = ["black", "red", "blue", "green", "brown", "pink", "yellow"]
+	var indexcor = 0
+	var x = 0;
+	var y = 0;
+
+
+	function desenhaQuadrado(x, y, cor) {
+
+		pincel.fillStyle = cor
+		pincel.fillRect(x, y, 50, 50)
+		pincel.fillStroke = "black"
+		pincel.strokeRect(x, y, 50, 50)
+		
+	}
+	
+	function fileiraDeQuadrados(numeroDeFileras) {
+
+		while (y <= 50 * numeroDeFileras){
+
+			while (x < 550) {
+				desenhaQuadrado (x, y, cores[indexcor])
+				x = x + 50
+				indexcor = indexcor + 1
+
+				if (indexcor == 7) {
+					indexcor = 0
+				}
+			}
+
+			y = y + 50
+		}
+	}
+
+
+fileiraDeQuadrados(4)
+
+
+
+</script>
